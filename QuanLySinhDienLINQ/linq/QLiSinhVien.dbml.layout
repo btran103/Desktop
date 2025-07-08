@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLiSinhVien">
+  <DataContextMoniker Name="/QLiSinhVienDataContext" />
+  <nestedChildShapes>
+    <classShape Id="94f5ce45-e45c-4510-a612-2563982c2428" absoluteBounds="3.625, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QLiSinhVienDataContext/KHOA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68b3c81b-cbd3-49a6-933f-e55ae1d1298a" absoluteBounds="3.64, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ca7f275-0921-4d7c-a4f0-eb7a2112fd34" absoluteBounds="0.875, 3, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QLiSinhVienDataContext/MONHOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5be374f5-dfb7-449f-9ab3-c857a71abfbb" absoluteBounds="0.89000000000000012, 3.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9eb9e87-c0f8-4036-aa94-1d09467fd2b2" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLiSinhVienDataContext/SINHVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="802b65e2-3334-4852-98e2-569a81b53bd5" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 1.47199625651042); (2.5 : 1.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLiSinhVienDataContext/KHOA/KHOA_SINHVIEN" />
+      <nodes>
+        <classShapeMoniker Id="94f5ce45-e45c-4510-a612-2563982c2428" />
+        <classShapeMoniker Id="f9eb9e87-c0f8-4036-aa94-1d09467fd2b2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4477d4fd-c26c-4e07-a53c-6eaaeb9d77bb" absoluteBounds="2.25, 4.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QLiSinhVienDataContext/TaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ebfcb8d-8472-4cd8-80c9-a52c44122f93" absoluteBounds="2.265, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
