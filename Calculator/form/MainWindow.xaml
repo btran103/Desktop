@@ -1,0 +1,46 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator"
+        SizeToContent="WidthAndHeight">
+    <StackPanel Background="Beige">
+
+        <!-- Operand 1 -->
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10" Target="{Binding ElementName=txtOp1}">
+                Operand _1:
+            </Label>
+            <TextBox Margin="10" Width="72" Name="txtOp1"/>
+        </StackPanel>
+
+        <!-- Operand 2 -->
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10" Target="{Binding ElementName=txtOp2}">
+                Operand _2:
+            </Label>
+            <TextBox Margin="10" Width="72" Name="txtOp2"/>
+        </StackPanel>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="10" Width="60" Name="btnAdd" Click="btnAdd_Click">
+                _Add
+            </Button>
+            <Button Margin="10" Width="60" Name="btnSubtract" Click="btnSubtract_Click">
+                _Subtract
+            </Button>
+        </StackPanel>
+
+        <!-- Answer -->
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10">
+                Answer:
+            </Label>
+            <TextBox Margin="10" Width="72" Name="txtAns" IsReadOnly="True"/>
+        </StackPanel>
+
+        <!-- Checkbox -->
+        <CheckBox Margin="10" Name="chkCenter" Content=" Center Numeric Values"
+                  Checked="chkCenter_Checked" Unchecked="chkCenter_Checked"/>
+    </StackPanel>
+</Window>
