@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVien" Class="QuanLyThuVienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="QuanLyThuVien.Properties.Settings" SettingsPropertyName="QuanLyThuVienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PHIEUMUONSACH" Member="PHIEUMUONSACHes">
+    <Type Name="PHIEUMUONSACH">
+      <Column Name="MaPhieuMuon" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayMuon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="PHIEUMUONSACH_THONGTINMUONSACH" Member="THONGTINMUONSACHes" ThisKey="MaPhieuMuon" OtherKey="MaPhieuMuon" Type="THONGTINMUONSACH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SACH" Member="SACHes">
+    <Type Name="SACH">
+      <Column Name="MaSach" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tensach" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tacgia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Namxuatban" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nhaxuatban" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Trigia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="SACH_THONGTINMUONSACH" Member="THONGTINMUONSACHes" ThisKey="MaSach" OtherKey="MaSach" Type="THONGTINMUONSACH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THONGTINMUONSACH" Member="THONGTINMUONSACHes">
+    <Type Name="THONGTINMUONSACH">
+      <Column Name="MaSach" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaPhieuMuon" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PHIEUMUONSACH_THONGTINMUONSACH" Member="PHIEUMUONSACH" ThisKey="MaPhieuMuon" OtherKey="MaPhieuMuon" Type="PHIEUMUONSACH" IsForeignKey="true" />
+      <Association Name="SACH_THONGTINMUONSACH" Member="SACH" ThisKey="MaSach" OtherKey="MaSach" Type="SACH" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
