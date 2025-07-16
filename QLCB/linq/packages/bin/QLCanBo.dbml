@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLCANBO" Class="QLCanBoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=QLCANBO;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="QLCB.Properties.Settings" SettingsPropertyName="QLCANBOConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CanBo" Member="CanBos">
+    <Type Name="CanBo">
+      <Column Name="MaCB" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="HeSoLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="CanBo_TienLuong" Member="TienLuongs" ThisKey="MaCB" OtherKey="MaCB" Type="TienLuong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CongTac" Member="CongTacs">
+    <Type Name="CongTac">
+      <Column Name="MaCV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TienLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="CongTac_TienLuong" Member="TienLuongs" ThisKey="MaCV" OtherKey="MaCV" Type="TienLuong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="TenDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TienLuong" Member="TienLuongs">
+    <Type Name="TienLuong">
+      <Column Name="MaCB" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaCV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CanBo_TienLuong" Member="CanBo" ThisKey="MaCB" OtherKey="MaCB" Type="CanBo" IsForeignKey="true" />
+      <Association Name="CongTac_TienLuong" Member="CongTac" ThisKey="MaCV" OtherKey="MaCV" Type="CongTac" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLCanBo">
+  <DataContextMoniker Name="/QLCanBoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="495a96f5-0502-4fc0-84e6-3fa99dbaa208" absoluteBounds="3.75, 1.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLCanBoDataContext/CanBo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e09de9d-5549-43e0-a9ef-3c82d9757c13" absoluteBounds="3.765, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a8acab7-bdaa-4d6b-a57c-bb610d11b306" absoluteBounds="0.5, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QLCanBoDataContext/CongTac" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd98376b-3fb8-4c4c-a5dd-e369f52280c5" absoluteBounds="0.51499999999999968, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="558e6956-2737-4815-834f-7c3ef13aceb6" absoluteBounds="4.625, 3.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QLCanBoDataContext/TaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27f4bdd5-2435-4778-a598-b6793d4ba35f" absoluteBounds="4.64, 4.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94bbb3cc-ac99-41f9-8c78-4fcb745e3260" absoluteBounds="1.75, 3.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QLCanBoDataContext/TienLuong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3023aa6-2798-4f4e-b235-86e9d39ca99b" absoluteBounds="1.7650000000000001, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.7500005 : 3.02089680989583); (4.7500005 : 3.32089680989583); (4.05 : 3.32089680989583); (4.05 : 3.81814697265625); (3.75 : 3.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLCanBoDataContext/CanBo/CanBo_TienLuong" />
+      <nodes>
+        <classShapeMoniker Id="495a96f5-0502-4fc0-84e6-3fa99dbaa208" />
+        <classShapeMoniker Id="94bbb3cc-ac99-41f9-8c78-4fcb745e3260" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 2.0112939453125); (2.125 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLCanBoDataContext/CongTac/CongTac_TienLuong" />
+      <nodes>
+        <classShapeMoniker Id="5a8acab7-bdaa-4d6b-a57c-bb610d11b306" />
+        <classShapeMoniker Id="94bbb3cc-ac99-41f9-8c78-4fcb745e3260" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
