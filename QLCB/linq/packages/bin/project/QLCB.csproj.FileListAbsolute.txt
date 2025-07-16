@@ -1,0 +1,12 @@
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.csproj.AssemblyReference.cache
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.FormQLCB.resources
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.FormThongkeLuong.resources
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.Properties.Resources.resources
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.csproj.GenerateResource.cache
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.csproj.CoreCompileInputs.cache
+D:\desktop\QLCB\QLCB\bin\Debug\QLCB.exe.config
+D:\desktop\QLCB\QLCB\bin\Debug\QLCB.exe
+D:\desktop\QLCB\QLCB\bin\Debug\QLCB.pdb
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.exe
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.pdb
+D:\desktop\QLCB\QLCB\obj\Debug\QLCB.FormDN.resources
